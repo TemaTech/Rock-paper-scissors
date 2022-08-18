@@ -13,6 +13,11 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     background-color: aliceblue;
     color: black;
+}
+
+.results {
+    color: rgb(0, 20, 50);
 }
