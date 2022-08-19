@@ -48,9 +48,7 @@ function getInputWeapon() {
 
 // Function that plays "Rock paper scissors".
 function game() {
-    getInputWeapon();
     let playerSelection = getInputWeapon();
-    getComputerChoice();
     let computerSelection = getComputerChoice();
     playRound(playerSelection, computerSelection);
     console.log(result);
