@@ -54,6 +54,6 @@ function game() {
     console.log(result);
 }
 
-for (let i = 0; i < 5; i++) {
-    game();
-}
+// for (let i = 0; i < 5; i++) {
+//     game();
+// }

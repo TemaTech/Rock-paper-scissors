@@ -4,20 +4,285 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    transition: 0.3s ease-in-out;
 }
 
 html {
-    font-family: Montserrat, sans-serif;
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: 100vh;
+    font-family: Montserrat, 'sans-serif';
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Color Variables */
+:root {
+    --violet-gradient: linear-gradient(to right, #4A00E0, #8E2DE2);
+    --red-gradient: linear-gradient(to right, #e52d27, #b31217);
+    --green-gradient: linear-gradient(to right, #fdfc47, #24fe41);
+    --whi-gr: linear-gradient(to bottom, white, rgb(180, 180, 180));
+    --black-opacity-bg: rgba(0, 0, 0, 0.3);
+    --gray-footer: #8E8E8E;
+    --opace-white: rgba(255, 255, 255, 0.7);
+    --opace-black: rgba(0, 0, 0, 0.7);
+}
+
+
+/* Navbar section */
+.navbar {
+    background-color: var(--black-opacity-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+#nav-title {
+    color: white;
+    font-weight: 300;
+    font-size: 24px;
+}
+/* ------------------- */
+
+
+/* Wrapper */
+.wrapper {
+    max-width: 680px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    flex-direction: column;
+    margin-top: 2em;
+}
+/* ------------------- */
+
+
+/* Score area */
+.score-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 680px;
+}
+
+.player-container,
+.computer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: .5em;
+}
+.text-player,
+.text-computer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box-player {
+    background: #8E2DE2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4A00E0, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    box-shadow: #8d2de257 0px 7px 29px 0px;
+}
+.box-player span {
+    color: var(--opace-black);
+    font-weight: 800;
+    font-size: 128px;
+}
+
+.box-computer {
+    background: #e52d27;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #b31217, #e52d27);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #b31217, #e52d27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: #e52d275a 0px 7px 29px 0px;
+}
+.box-computer span {
+    color: var(--opace-black);
+    font-weight: 800;
+    font-size: 128px;
+}
+
+.player-text-score {
+    background: var(--violet-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
+    font-weight: normal;
+}
+.pc-text-score {
+    background: var(--red-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.choice-pc,
+.choice-player {
+    color: var(--opace-white);
+}
+
+.hyphen-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 42px;
     align-items: center;
-    text-align: center;
-    background-color: aliceblue;
-    color: black;
+    gap: .3em;
+}
+.hyphen {
+    height: 22px;
+    width: 174px;
+    background: var(--black-opacity-bg);
+    border-radius: 10px;
 }
 
-.results {
-    color: rgb(0, 20, 50);
+.rounds {
+    color: var(--black-opacity-bg);
 }
+
+/* ------------------- */
+
+
+/* Playing area */
+
+.play-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3em;
+}
+
+.playing-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3em;
+    background-color: var(--black-opacity-bg);
+    border-radius: 10px;
+    width: 680px;
+    padding: 3em;
+}
+
+.title-play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-play h2 {
+    color: var(--opace-white);
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.weapons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 6em;
+}
+
+.rock,
+.paper,
+.scissors {
+    background: none;
+    border: none;
+}
+
+.rock:hover,
+.paper:hover,
+.scissors:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.rock:active,
+.paper:active,
+.scissors:active {
+    transform: scale(0.9);
+}
+
+/* ------------------- */
+
+
+/* Footer container */
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.name-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.name-footer h3 {
+    color: var(--gray-footer);
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.link-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 2em;
+}
+
+.link-footer a h3 {
+    color: var(--gray-footer);
+    font-weight: 300;
+    font-size: 16px;
+    text-decoration-color: var(--gray-footer);
+}
+
+.link-footer a h3:hover {
+    text-decoration: underline;
+}
+
+/* ------------------- */
