@@ -219,23 +219,23 @@ a {
     gap: 6em;
 }
 
-.rock,
-.paper,
-.scissors {
+#rock,
+#paper,
+#scissors {
     background: none;
     border: none;
 }
 
-.rock:hover,
-.paper:hover,
-.scissors:hover {
+#rock:hover,
+#paper:hover,
+#scissors:hover {
     transform: scale(1.1);
     cursor: pointer;
 }
 
-.rock:active,
-.paper:active,
-.scissors:active {
+#rock:active,
+#paper:active,
+#scissors:active {
     transform: scale(0.9);
 }
 
@@ -284,5 +284,35 @@ a {
 .link-footer a h3:hover {
     text-decoration: underline;
 }
+
+/* ------------------- */
+
+/* Restart Button */
+
+.restart-button {
+    border: none;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1rem;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 3em;
+    padding-right: 3em;
+    border-radius: 20px;
+    background: #FDFC47;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24FE41, #FDFC47);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24FE41, #FDFC47); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.restart-button:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.restart-button:active {
+    transform: scale(0.98);
+}
+
 
 /* ------------------- */
